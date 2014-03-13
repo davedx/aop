@@ -7,8 +7,25 @@ In our search for a simple AOP library in JavaScript we evaluated several soluti
 
 How to use (assume 'cat' objects with prototype 'makeSound'...):
 
+		var Cat = function(){
+		  this.makeSound = function(){ 
+		    console.log('Meooowwww!');
+		  }; 
+		};
+		
+		Cat.prototype.test = function(){ console.log('test-proto') }
+		
+		var test = new Cat;
+		
+		Aop.before("test", function() {
+		      console.log('aop-test', arguments );
+		}, [ Cat.prototype ]);
+		
 		Aop.before("makeSound", function() {
-			console.error("[LOG]: ", JSON.stringify(arguments));
-		}, cat.prototype);
+		      console.log('aop-sound', arguments);
+		}, [ test ]);
+		
+		test.makeSound(2,56 );
+		test.test();
 
 License: MIT
