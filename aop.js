@@ -48,3 +48,5 @@ Aop.after = function(pointcut, advice, namespaces) {
              },
              namespaces);
 };
+
+module.exports = Aop;
