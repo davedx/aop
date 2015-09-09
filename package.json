@@ -1,0 +1,25 @@
+{
+  "name": "tiny-aop",
+  "version": "0.1.2",
+  "description": "A tiny aspect oriented programming library",
+  "main": "aop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davedx/aop.git"
+  },
+  "keywords": [
+    "aop",
+    "aspect",
+    "oriented",
+    "programming"
+  ],
+  "author": "Fredrik Appelberg, Dave Clayton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davedx/aop/issues"
+  },
+  "homepage": "https://github.com/davedx/aop#readme"
+}
