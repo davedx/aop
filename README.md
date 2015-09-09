@@ -17,25 +17,27 @@ How to use (assume 'cat' objects with prototype 'makeSound'...):
 
 		var Aop = require("tiny-aop");
 		
-		var Cat = function(){
-		  this.makeSound = function(){ 
+		var Cat = function() {
+		  this.makeSound = function() {
 		    console.log('Meooowwww!');
-		  }; 
+		  };
 		};
 		
-		Cat.prototype.test = function(){ console.log('test-proto') }
+		Cat.prototype.test = function() {
+			console.log('test-proto');
+		}
 		
 		var test = new Cat;
 		
 		Aop.before("test", function() {
-		      console.log('aop-test', arguments );
+		      console.log('aop-test', arguments);
 		}, [ Cat.prototype ]);
 		
 		Aop.before("makeSound", function() {
 		      console.log('aop-sound', arguments);
 		}, [ test ]);
 		
-		test.makeSound(2,56 );
+		test.makeSound(2, 56);
 		test.test();
 
 License: MIT
